@@ -1,0 +1,18 @@
+
+from game import Game
+
+.init() //???
+
+/*FENETRE*/ {
+
+pygame.display.set_caption("Jeu") //title de la fenêtre
+fenetre = pygame.display.set_mode((1200, 700)) //fenetre
+	param1 //fenêtre
+background = pygame.image.load('url') //appelle une image
+background.image.get_rect() //axe X et Y de l'image
+
+screen.blit(background, (0, -200)) //affiche l'image
+	param1 //image utilisée
+	(0, -200) //position de l'image (X, Y)
+
+}

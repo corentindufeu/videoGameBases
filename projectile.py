@@ -1,8 +1,10 @@
 import pygame
 
+
 class Projectile(pygame.sprite.Sprite):
-    def __init__(self, player):
+    def __init__(self, player, game):
         super().__init__()
+        self.game = game
         self.velocity = 5
         self.player = player
         self.image = pygame.image.load('assets/projectile.png')
@@ -25,6 +27,8 @@ class Projectile(pygame.sprite.Sprite):
     def move(self):
         self.rect.x += self.velocity
         self.rotate()
-        if self.rect.x > 1200:
+        if self.game.check_collision(self, self.game.all_monsters):
+            self.remove()
+        elif self.rect.x > 1200:
             self.remove()
 
