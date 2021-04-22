@@ -18,7 +18,6 @@ class Game:
             "touche_fleche_gauche": True,
             "touche_fleche_droite": True
         }
-        self.spawn_monster()
 
     def check_collision(self, sprite, group):
         return pygame.sprite.spritecollide(sprite, group, False, pygame.sprite.collide_mask)
